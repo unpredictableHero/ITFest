@@ -1,5 +1,3 @@
-
-
 import static org.apache.log4j.Logger.getLogger;
 
 import java.util.Iterator;
@@ -14,13 +12,10 @@ public class MultithreadingExample {
 
     public static void main(String[] args) {
 
-
-
         LOGGER.error("Wrong");
         new Producer().start();
         new Consumer().start();
     }
-
 
     public static class Producer extends Thread {
 
@@ -28,7 +23,8 @@ public class MultithreadingExample {
             super("Producer");
         }
 
-        @Override public void run() {
+        @Override
+        public void run() {
             while (true) {
                 try {
                     Thread.sleep(1);
@@ -44,16 +40,15 @@ public class MultithreadingExample {
         }
     }
 
-
     public static class Consumer extends Thread {
 
-        public Consumer(){
+        public Consumer() {
             super("Consumer");
         }
 
         @Override public void run() {
-            while(true) {
-                try{
+            while (true) {
+                try {
                     Thread.sleep(1);
                 } catch (Exception e) {
                     LOGGER.error("Consumer exception" + e.getMessage());

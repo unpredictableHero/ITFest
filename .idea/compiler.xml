@@ -29,12 +29,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="itest" target="1.5" />
-      <module name="ITFest" target="1.5" />
-      <module name="itfest-itest" target="1.5" />
-      <module name="itfest-multithreading" target="1.5" />
-      <module name="itfest-parent" target="1.5" />
-      <module name="parent" target="1.5" />
+      <module name="ITFest" target="1.8" />
+      <module name="itfest-itest" target="1.8" />
+      <module name="itfest-multithreading" target="1.8" />
+      <module name="itfest-parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
