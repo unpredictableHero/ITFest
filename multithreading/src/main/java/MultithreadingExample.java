@@ -8,30 +8,14 @@ import org.apache.log4j.Logger;
 public class MultithreadingExample {
 
     public static final Logger LOGGER = getLogger(MultithreadingExample.class);
-    public static Vector<Object> data = new Vector<Object>();
+    public static Vector<Object> data = new Vector<>();
 
     public static void main(String[] args) {
 
         LOGGER.error("Wrong");
-        //new Producer().start();
+        new Producer().start();
         new Consumer().start();
-
-        new Thread(() -> {
-            while (true) {
-                try {
-                    Thread.sleep(1);
-                } catch (Exception e) {
-                    LOGGER.error("Producer exception" + e.getMessage());
-                }
-                LOGGER.info("Producer");
-                data.add(new Object());
-                if (data.size() > 1000) {
-                    data.remove(data.size() - 1);
-                }
-            }
-        }).start();
     }
-
     public static class Producer extends Thread {
 
         public Producer() {
@@ -48,9 +32,6 @@ public class MultithreadingExample {
                 }
                 LOGGER.info("Producer");
                 data.add(new Object());
-                if (data.size() > 1000) {
-                    data.remove(data.size() - 1);
-                }
             }
         }
     }
@@ -69,12 +50,10 @@ public class MultithreadingExample {
                     LOGGER.error("Consumer exception" + e.getMessage());
                 }
                 LOGGER.info("Consumer");
-                synchronized (data) {
                     Iterator it = data.iterator();
                     while (it.hasNext()) {
                         it.next();
                     }
-                }
             }
         }
     }
