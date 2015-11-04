@@ -16,6 +16,8 @@ public class MultithreadingExample {
         //new Producer().start();
         new Consumer().start();
 
+
+        //lambda
         new Thread(() -> {
             while (true) {
                 try {
