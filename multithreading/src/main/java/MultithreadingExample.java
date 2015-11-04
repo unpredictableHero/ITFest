@@ -13,8 +13,23 @@ public class MultithreadingExample {
     public static void main(String[] args) {
 
         LOGGER.error("Wrong");
-        new Producer().start();
+        //new Producer().start();
         new Consumer().start();
+
+        new Thread(() -> {
+            while (true) {
+                try {
+                    Thread.sleep(1);
+                } catch (Exception e) {
+                    LOGGER.error("Producer exception" + e.getMessage());
+                }
+                LOGGER.info("Producer");
+                data.add(new Object());
+                if (data.size() > 1000) {
+                    data.remove(data.size() - 1);
+                }
+            }
+        }).start();
     }
 
     public static class Producer extends Thread {
