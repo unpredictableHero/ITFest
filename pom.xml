@@ -15,5 +15,43 @@
         <module>multithreading</module>
     </modules>
 
+    <repositories>
+    <repository>
+        <id>central</id>
+        <url>http://repo1.maven.org/maven2</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+    </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>http://repo1.maven.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+        <javaLanguage.version>1.8</javaLanguage.version>
+    </properties>
+    <build>
+    <pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${javaLanguage.version}</source>
+                    <target>${javaLanguage.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+
+    </pluginManagement>
+    </build>
 
 </project>
