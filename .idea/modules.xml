@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ITFest.iml" filepath="$PROJECT_DIR$/ITFest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examplesJava8/itfest-examplesJava8.iml" filepath="$PROJECT_DIR$/examplesJava8/itfest-examplesJava8.iml" />
       <module fileurl="file://$PROJECT_DIR$/itest/itfest-itest.iml" filepath="$PROJECT_DIR$/itest/itfest-itest.iml" />
       <module fileurl="file://$PROJECT_DIR$/multithreading/itfest-multithreading.iml" filepath="$PROJECT_DIR$/multithreading/itfest-multithreading.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/itfest-parent.iml" filepath="$PROJECT_DIR$/parent/itfest-parent.iml" />

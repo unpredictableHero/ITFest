@@ -13,6 +13,7 @@
         <module>parent</module>
         <module>itest</module>
         <module>multithreading</module>
+        <module>examplesJava8</module>
     </modules>
 
     <repositories>

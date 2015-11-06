@@ -39,12 +39,20 @@
         <processorPath useClasspath="true" />
         <module name="itfest-multithreading" />
       </profile>
+      <profile default="false" name="Annotation profile for itfest-examplesJava8" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="itfest-examplesJava8" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ITFest" target="1.8" />
+      <module name="ITFest" target="1.5" />
+      <module name="itfest-examplesJava8" target="1.8" />
       <module name="itfest-itest" target="1.8" />
       <module name="itfest-multithreading" target="1.8" />
-      <module name="itfest-parent" target="1.8" />
+      <module name="itfest-parent" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
