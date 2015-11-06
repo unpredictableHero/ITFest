@@ -20,7 +20,7 @@ public class MultithreadingExample2 {
     public static class Producer extends Thread {
 
         public Producer() {
-            super("Producer");
+            super(" Producer ");
         }
 
         @Override
