@@ -23,9 +23,21 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="itest" />
-        <module name="itfest-itest" />
-        <module name="itfest-multithreading" />
         <module name="parent" />
+      </profile>
+      <profile default="false" name="Annotation profile for itfest-itest" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="itfest-itest" />
+      </profile>
+      <profile default="false" name="Annotation profile for itfest-multithreading" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="itfest-multithreading" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -5,9 +5,9 @@ import java.util.Vector;
 
 import org.apache.log4j.Logger;
 
-public class MultithreadingExample {
+public class MultithreadingExample2 {
 
-    public static final Logger LOGGER = getLogger(MultithreadingExample.class);
+    public static final Logger LOGGER = getLogger(MultithreadingExample2.class);
     public static Vector<Object> data = new Vector<>();
 
     public static void main(String[] args) {
@@ -16,6 +16,7 @@ public class MultithreadingExample {
         new Producer().start();
         new Consumer().start();
     }
+
     public static class Producer extends Thread {
 
         public Producer() {
@@ -42,7 +43,8 @@ public class MultithreadingExample {
             super("Consumer");
         }
 
-        @Override public void run() {
+        @Override
+        public void run() {
             while (true) {
                 try {
                     Thread.sleep(1);
@@ -50,10 +52,10 @@ public class MultithreadingExample {
                     LOGGER.error("Consumer exception" + e.getMessage());
                 }
                 LOGGER.info("Consumer");
-                    Iterator it = data.iterator();
-                    while (it.hasNext()) {
-                        it.next();
-                    }
+                Iterator it = data.iterator();
+                while (it.hasNext()) {
+                    it.next();
+                }
             }
         }
     }
